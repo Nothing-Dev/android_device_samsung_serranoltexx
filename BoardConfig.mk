@@ -29,6 +29,13 @@ TARGET_OTA_ASSERT_DEVICE := serranolte,serranoltebmc,serranoltektt,serranoltexx
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8930_serrano_eur_lte_defconfig
 
+# Enable dex-preoptimization to speed up first boot sequence
+ifeq ($(HOST_OS),linux)
+WITH_DEXPREOPT := true
+DONT_DEXPREOPT_PREBUILTS := true
+endif
+
+
 # NFC
 BOARD_HAVE_NFC := true
 

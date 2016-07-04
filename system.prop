@@ -6,3 +6,61 @@ rild.libargs=-d /dev/smd0
 
 telephony.lteOnGsmDevice=1
 ro.telephony.default_network=9
+
+
+#Qualcomm tweaks
+com.qc.hardware=1
+debug.qc.hardware=true
+debug.qctwa.preservebuf=1
+debug.qctwa.statusbar=1
+
+#Better internet browsing & download speed
+net.tcp.buffersize.default=4096,87380,256960,4096, 16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.umts=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.hspa=6144,87380,524288,6144,163 84,262144
+net.tcp.buffersize.lte=524288,1048576,2097152,5242 88,1048576,2097152
+net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,8 7380,1048576
+net.tcp.buffersize.evdo_b=6144,87380,1048576,6144, 87380,1048576
+
+#Increase jpg quality to 100%
+ro.media.enc.jpeg.quality=100
+
+# Rendering Tweaks
+debug.composition.type=c2d
+debug.egl.hw=1
+debug.enabletr=true
+debug.overlayui.enable=1
+debug.qctwa.preservebuf=1
+debug.performance.tuning=1
+debug.sf.hw=1
+dev.pm.dyn_samplingrate=1
+hw3d.force=1
+ro.config.disable.hw_accel=false
+ro.fb.mode=1
+ro.sf.compbypass.enable=0
+ro.vold.umsdirtyratio=20
+persist.sys.composition.type=c2d
+persist.sys.ui.hw=1
+video.accelerate.hw=1
+
+# Enable GPU Acceleration
+debug.sf.hw=1
+video.accelerate.hw=1
+debug.performance.tuning=1
+persist.sys.composition.type=gpu
+debug.qc.hardware=true
+debug.qctwa.statusbar=1
+debug.qctwa.preservebuf=1
+debug.egl.profiler=1
+debug.egl.hw=1
+debug.composition.type=gpu
+hw3d.force=1
+ro.product.gpu.driver=1
+persist.sys.use_16bpp_alpha=1
+persist.sampling_profiler=0
+hwui.render_dirty_regions=false
+hwui.disable_vsync=true
+
